@@ -1,0 +1,15 @@
+/*Botões, cards, elementos reutilizaveis*/
+
+/*Botão*/
+.btn{
+    background: var(--color-primary);
+    color: var(--color-dark);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
