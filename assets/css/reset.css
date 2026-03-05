@@ -1,1 +1,6 @@
 /*Limpeza do navegador*/
+*{
+    margin: 0; /*Remove margem padrão*/
+    padding: 0; /*remove espaçamento padrão*/
+    box-sizing: border-box; /*para evitar bugs de layout*/
+}
