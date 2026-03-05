@@ -1,0 +1,11 @@
+/* Cores e padrões*/
+:root{ /*O root permite que tudo definido aqui possa ser usado em todo o projeto*/
+    --color-dark: #181818; /*Cor principal de fundo*/
+    --color-primary: #FD8800; /*Cor amarela de destaque*/
+    --color-white: #ffffff; /*Cor padrão de texto*/
+
+    --gap: 3rem; /*Espaçamento padrão, para usar se necessario em padding e margens*/
+    --max-width: 1200px; /*Largura max do conteudo centralizado*/
+
+    --transition-default: 0.3s ease; /*padrão de animação e hover*/
+}
