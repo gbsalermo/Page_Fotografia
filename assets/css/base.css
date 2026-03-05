@@ -1,1 +1,14 @@
 /*Estilo geral do body e textos*/
+
+html{
+    font-size: 62,5%; /*Define em 10px*/
+}
+body {
+    font-family: 'Open Sans', sans-serif; /*Fonte padrão*/
+    font-size: 2rem; /*Tamanho base*/
+    background: var(--color-dark); 
+    color: var(--color-white); /*Cor padrão do texto*/
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif; /*Fonte especifica para titulos*/
+}
