@@ -1,7 +1,8 @@
 /* Cores e padrões*/
 :root{ /*O root permite que tudo definido aqui possa ser usado em todo o projeto*/
     --color-dark: #181818; /*Cor principal de fundo*/
-    --color-primary: #FD8800; /*Cor amarela de destaque*/
+    --color-dark-2: #202020; /*Cor secundaria*/
+    --color-primary: #FFC300; /*Cor amarela de destaque*/
     --color-white: #ffffff; /*Cor padrão de texto*/
     --light-gray-color:#EEEEEE;
     --gap: 3rem; /*Espaçamento padrão, para usar se necessario em padding e margens*/

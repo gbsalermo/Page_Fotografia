@@ -1,12 +1,12 @@
 /*Header e navegação*/
 .menu{
-    background: var(--color-white);
+    background: var(--color-dark-2);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 2px solid var(--light-gray-color);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     z-index: 10;
 }
 
@@ -14,7 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -51,7 +50,7 @@
     left: 25%;
     width: 0;
     height: 0.2rem;
-    background: crimson;
+    background: #fd9c00;
     transition: all var(--transition-default);
 }
 
