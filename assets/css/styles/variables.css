@@ -3,7 +3,7 @@
     --color-dark: #181818; /*Cor principal de fundo*/
     --color-primary: #FD8800; /*Cor amarela de destaque*/
     --color-white: #ffffff; /*Cor padrão de texto*/
-
+    --light-gray-color:#EEEEEE;
     --gap: 3rem; /*Espaçamento padrão, para usar se necessario em padding e margens*/
     --max-width: 1200px; /*Largura max do conteudo centralizado*/
 

@@ -10,3 +10,6 @@
     padding: var(--gap); /*Cria espaçãmento interno a partir do que foi definido em variable*/
 }
 
+.section{
+    padding-top: 8rem;
+}

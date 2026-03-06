@@ -7,7 +7,7 @@
     <title>Fotografia Page</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="assets/css/styles.css/">
+    <link rel="stylesheet" href="assets/css/styles/styles.css">
 
     <!--Fontes do google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,20 +17,35 @@
         rel="stylesheet">
 
 </head>
-<body>
+<body class="main-bg">
 
-    <section class ="main-bg section">
-        <div class="main-content">
-            <h1>Testando</h1>
-            <p>Lorem ipsum dolor sit amet</p>
+    <!--MENU-->
+    <aside class="menu">
+        <div class="container menu-content">
+            
+            <h1>
+                <a href="#inicio">LOGO</a>
+            </h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#inicio">inicio</a></li>
+                    <li><a href="#sobre">sobre</a></li>
+                    <li><a href="#servicos">serviços</a></li>
+                    <li><a href="#portfolio">portifólio</a></li>
+                    <li><a href="#contato">contato</a></li>
+                </ul>
+            </nav>
+
         </div>
-    </section>
-    
-    <section class ="white-bg section">
-        <div class="main-content">
-            <h1>Testando</h1>
-            <p>Lorem ipsum dolor sit amet</p>
-        </div>
-    </section>
+    </aside>
+
+    <!--SEÇÔES-->
+    <section id="inicio" class="section white-bg"></section>
+    <section id="sobre" class="section"></section>
+    <section id="servicos" class="section"></section>
+    <section id="portfolio" class="section"></section>
+    <section id="contato" class="section"></section>
+
 </body>
 </html>
