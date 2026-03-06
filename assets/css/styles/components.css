@@ -13,3 +13,155 @@
 .btn:hover{
     opacity: 0.8;
 }
+.hero-title{
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(3.6rem, 7vw, 6.5rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: #ffe566;                        /* amarelo mais claro */
+      position: relative;
+      z-index: 1;
+
+      /* Neon glow no texto */
+      text-shadow:
+        0 0  6px rgba(255, 229, 102, 0.9),
+        0 0 14px rgba(255, 200,  40, 0.7),
+        0 0 30px rgba(255, 160,   0, 0.5),
+        0 0 60px rgba(255, 120,   0, 0.25);
+
+      animation: textFlicker 5s ease-in-out infinite;
+}
+.hero-text {
+      position: relative;
+      padding: 3rem 4rem;
+}
+/*Fundo neon*/
+.hero-text::before {
+      content: '';
+      position: absolute;
+      inset: -30px;
+      background: radial-gradient(ellipse 70% 55% at 40% 50%,
+        rgba(255, 220, 80, 0.18) 0%,
+        rgba(255, 160, 0, 0.08) 45%,
+        transparent 75%
+      );
+      filter: blur(18px);
+      border-radius: 50%;
+      animation: glowPulse 3.5s ease-in-out infinite;
+      z-index: 0;
+      pointer-events: none;
+}
+/*Linha decorativa lateral*/
+.hero-text::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      height: 80%;
+      width: 3px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        #ffe566,
+        #ffa800,
+        transparent
+      );
+      border-radius: 2px;
+      animation: lineGlow 3.5s ease-in-out infinite;
+}
+
+    .hero-title .line-2 { /*Criando particulas*/
+      display: block;
+      font-size: 0.72em;
+      color: #ffd000;
+      letter-spacing: 0.04em;
+      margin-top: 0.1em;
+      text-shadow:
+        0 0  5px rgba(255, 208, 0, 0.9),
+        0 0 12px rgba(255, 180, 0, 0.2),
+        0 0 5px rgba(255, 60, 0, 0.4);
+    }
+    /* ── PARTÍCULAS DECORATIVAS (pseudo-estrelas) ───────── */
+    .sparks {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .sparks span {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: #ffe566;
+      opacity: 0;
+      animation: sparkle var(--d, 4s) var(--delay, 0s) ease-in-out infinite;
+    }
+
+    /* posições das partículas */
+    .sparks span:nth-child(1)  { top: 15%; left: 80%; --d:3.8s; --delay:0s;    }
+    .sparks span:nth-child(2)  { top: 70%; left: 92%; --d:4.2s; --delay:0.6s;  }
+    .sparks span:nth-child(3)  { top: 30%; left: 5%;  --d:3.5s; --delay:1.2s;  }
+    .sparks span:nth-child(4)  { top: 85%; left: 20%; --d:5s;   --delay:0.3s;  }
+    .sparks span:nth-child(5)  { top: 10%; left: 55%; --d:4.6s; --delay:1.8s;  }
+    .sparks span:nth-child(6)  { top: 55%; left: 3%;  --d:3.2s; --delay:2.1s;  }
+    .sparks span:nth-child(7)  { top: 90%; left: 70%; --d:4.8s; --delay:0.9s;  }
+    .sparks span:nth-child(8)  { top: 40%; left: 95%; --d:3.6s; --delay:1.5s;  }
+    /* ── ANIMAÇÕES ───────────────────────────────────────── */
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.8; transform: scale(1);    }
+      50%       { opacity: 1;   transform: scale(1.08); }
+    }
+
+    @keyframes lineGlow {
+      0%, 100% { opacity: 0.5; }
+      50%       { opacity: 1;   box-shadow: 0 0 10px #ffe566, 0 0 20px #ffa800; }
+    }
+
+    @keyframes textFlicker {
+      0%, 95%, 100% {
+        text-shadow:
+          /*0 0  6px rgba(255, 229, 102, 0.9),
+          0 0 14px rgba(255, 200,  40, 0.7),
+          0 0 30px rgba(255, 160,   0, 0.5),
+          0 0 60px rgba(255, 120,   0, 0.25);*/
+           /* 0 0  4px rgba(255, 229, 102, 0.4),
+            0 0 10px rgba(255, 200,  40, 0.25),
+          /*  0 0 20px rgba(255, 50,   0, 0.08);*/
+
+        0 0 2px rgba(255, 208, 0, 0.5),
+        0 0 5px rgba(255, 180, 0, 0.2),
+        0 0 10px rgba(255, 120, 0, 0.1);
+      }
+      96% {
+        text-shadow:
+          0 0  3px rgba(255, 229, 102, 0.5),
+          0 0  8px rgba(255, 200,  40, 0.3);
+      }
+      97% {
+        text-shadow:
+          0 0  6px rgba(255, 229, 102, 0.9),
+          0 0 14px rgba(255, 200,  40, 0.7),
+          0 0 30px rgba(255, 160,   0, 0.5),
+          0 0 60px rgba(255, 120,   0, 0.25);
+      }
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0;   transform: scale(0.5) translateY(0);   }
+      30%       { opacity: 0.8; transform: scale(1.5) translateY(-4px); }
+      60%       { opacity: 0.4; transform: scale(1)   translateY(-2px); }
+    }
+
+    /* ── ENTRADA ANIMADA ─────────────────────────────────── */
+    .hero-title {
+      animation: textFlicker 5s ease-in-out infinite, fadeUp 0.9s cubic-bezier(.22,1,.36,1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }

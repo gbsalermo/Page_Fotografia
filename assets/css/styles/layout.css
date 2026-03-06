@@ -13,3 +13,45 @@
 .section{
     padding-top: 8rem;
 }
+.hero-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 90vh;
+}
+.hero-text{
+    display: flex;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+}
+.hero-title{
+    color: var(--color-primary);
+    font-size: 6rem;
+    line-height: 1.1;
+    font-weight: 800;
+    max-width: 500px;
+}
+.hero-visual{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-media{
+    height: 350px;
+    background: #222; /* temporário até colocar as imagens */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.hero-info{
+    text-align: right;
+}
+
+.hero-subtitle{
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+.hero-proof{
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
