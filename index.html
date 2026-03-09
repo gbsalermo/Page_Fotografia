@@ -3,35 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Fotografia Page</title>
-
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/styles/styles.css">
-
     <!--Fontes do google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap"
-        rel="stylesheet">
-    
-    
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
 </head>
 <body class="main-bg">
 
     <!--MENU-->
     <aside class="menu">
         <div class="container menu-content">
-            
             <h1>
                 <a href="#inicio">
                     <img src="assets/media/logo2.png" alt="Logo do fotógrafo">
                 </a>
             </h1>
-
             <nav>
                 <ul>
                     <li><a href="#inicio">inicio</a></li>
@@ -41,45 +31,86 @@
                     <li><a href="#contato">contato</a></li>
                 </ul>
             </nav>
-
         </div>
     </aside>
 
- <section id="inicio" class="section">
-  <div class="container hero">
+    <!--SEÇÕES-->
+    <section id="inicio" class="section">
+        <div class="container">
+            <div class="hero-grid">
 
-    <!-- ESQUERDA: TÍTULO -->
-    <div class="hero-text" id="heroWrap">
-      <canvas id="boltCanvas"></canvas>
-      <h1 class="hero-title" id="heroTitle">
-        Da ideia ao impacto.
-        <span class="line-2" id="line2">Em cada foto.</span>
-      </h1>
-      <p class="hero-sub">Audiovisual que valoriza sua marca</p>
-    </div>
+                <!-- ESQUERDA: texto -->
+                <div class="hero-text" id="heroWrap">
+                    <canvas id="boltCanvas"></canvas>
+                    <h1 class="hero-title" id="heroTitle">
+                        Da ideia ao impacto.
+                        <span class="line-2" id="line2">Em cada foto.</span>
+                    </h1>
+                    <p class="hero-sub">Audiovisual que valoriza sua marca</p>
+                </div>
 
-    <!-- DIREITA: SLIDER -->
-    <div class="hero-slider-wrap">
-      <div class="depth-layers">
-        <div class="depth-layer"></div>
-        <div class="depth-layer"></div>
-      </div>
-      <div class="slide-frame" id="slideFrame">
-        <div class="slide active"> <!-- sua foto 1 aqui --> </div>
-        <div class="slide next">  <!-- sua foto 2 aqui --> </div>
-        <div class="slide behind"><!-- sua foto 3 aqui --> </div>
-        <div class="slide behind"><!-- sua foto 4 aqui --> </div>
-      </div>
-      <div class="slide-dots" id="dots"></div>
-      <div class="slide-label" id="slideLabel">01 / 04</div>
-    </div>
+                <!-- DIREITA: visor -->
+                <div class="hero-visual">
+                    <div class="viewfinder">
 
-  </div>
-</section>
-    <section id="sobre" class="section"></section>
+                        <!-- fotos com crossfade -->
+                        <div class="vf-photo active" id="photo0"></div>
+                        <div class="vf-photo"        id="photo1"></div>
+                        <div class="vf-photo"        id="photo2"></div>
+
+                        <div class="vf-overlay"></div>
+                        <div class="vf-vignette"></div>
+                        <div class="vf-grid"></div>
+                        <div class="scanline"></div>
+                        <div class="vf-crosshair"></div>
+                        <div class="vf-focus-ring"></div>
+                        <div class="vf-corner tl"></div>
+                        <div class="vf-corner tr"></div>
+                        <div class="vf-corner bl"></div>
+                        <div class="vf-corner br"></div>
+
+                        <div class="vf-top">
+                            <div class="rec-indicator"><div class="rec-dot"></div>REC</div>
+                            <div id="timecode">00:00:00:00</div>
+                            <div>4K · 30fps</div>
+                        </div>
+
+                        <div class="vf-bottom">
+                            <div class="vf-bottom-left">
+                                <div>ISO 3200</div>
+                                <div class="exposure-bar">EXP <div class="exposure-track"><div class="exposure-fill"></div></div></div>
+                            </div>
+                            <div class="vf-bottom-right">
+                                <div class="audio-bars">
+                                    <div class="audio-bar"></div><div class="audio-bar"></div>
+                                    <div class="audio-bar"></div><div class="audio-bar"></div>
+                                    <div class="audio-bar"></div><div class="audio-bar"></div>
+                                </div>
+                                <div>f/1.8 · 1/250s</div>
+                            </div>
+                        </div>
+
+                        <div class="vf-side vf-left">
+                            <div class="focus-track"><div class="focus-thumb"></div></div>
+                            <div class="focus-label">FOCUS</div>
+                        </div>
+                        <div class="vf-side vf-right">
+                            <div class="focus-track"><div class="focus-thumb" style="animation-delay:-2s"></div></div>
+                            <div class="focus-label zoom-label">ZOOM</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre"    class="section"></section>
     <section id="servicos" class="section"></section>
     <section id="portfolio" class="section"></section>
-    <section id="contato" class="section"></section>
+    <section id="contato"  class="section"></section>
 
+    <script src="assets/js/hero.js"></script>
 </body>
 </html>
