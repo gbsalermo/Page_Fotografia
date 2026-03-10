@@ -150,3 +150,15 @@ if (canvas && ctx && heroWrap) {
 
   document.fonts.ready.then(() => setTimeout(animateBolts, 100));
 }
+
+/* ── SCROLL SUAVE COM OFFSET DO MENU ── */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+    const menuHeight = document.querySelector('.menu').offsetHeight;
+    const top = target.getBoundingClientRect().top + window.scrollY - menuHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});

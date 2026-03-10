@@ -1,17 +1,15 @@
 /*Estrutura e posicionamento*/
 
 .section {
-    min-height: 100vh; /*Para que toda section ocupe no minimo a altura da tela*/
+  min-height: 100vh;
+  padding-top: 8rem;
+
 }
 
 .container {
     max-width: var(--max-width); /*Limita a largura pelo tamanho definido em variable*/
     margin: 0 auto; /*Centraliza*/
     padding: var(--gap); /*Cria espaçãmento interno a partir do que foi definido em variable*/
-}
-
-.section{
-    padding-top: 8rem;
 }
 .hero-grid{
     display: grid;

@@ -9,8 +9,9 @@
     <!--Fontes do google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+   <!-- REMOVER os dois links separados e substituir por este: -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:ital@1&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+
 </head>
 <body class="main-bg">
 
@@ -106,11 +107,197 @@
         </div>
     </section>
 
-    <section id="sobre"    class="section"></section>
-    <section id="servicos" class="section"></section>
+<section class="section">
+  <span id="sobre" style="position:relative; top:55px; display:block;"></span>
+  <div class="sobre">
+
+
+  <!-- TEXTO (esquerda) -->
+  <div class="sobre-texto">
+    <span class="sobre-label">Sobre</span>
+
+    <p>
+      Nascido em Ituberá, no sul da Bahia, Edilberto cresceu com os olhos curiosos
+      de quem sempre quis entender como as coisas funcionam. Desde cedo, tecnologia
+      e criatividade caminharam juntas — editando vídeos, mexendo em áudio,
+      descobrindo que a tela era só o começo.
+    </p>
+
+    <p>
+      Com mais de 4 anos de experiência, passou por palcos de shows, altares de
+      casamentos, ensaios pessoais e campanhas para artistas e profissionais de
+      diversas áreas. Cada projeto carrega a mesma essência: encontrar o ângulo
+      que ninguém viu, ou trazer à vida a melhor versão de uma ideia — seja ela
+      do cliente, seja sua.
+    </p>
+
+    <p>
+      O hábito de pesquisar e explorar o desconhecido moldou um olhar diferente.
+      Um olhar que não espera a cena perfeita — ele a cria.
+    </p>
+
+    <div class="sobre-quote">
+      <p>Porque grandes histórias não se constroem com pressa. Cada take carrega
+      intenção, aprendizado e verdade. Foco no presente, constância no caminho.</p>
+    </div>
+  </div>
+
+  <!-- FOTO (direita) -->
+  <!-- Substitua pelo caminho real da foto -->
+  <div class="sobre-foto-wrap">
+    <div class="sobre-foto">
+      <img src="assets/media/perfil.jpg" alt="Edilberto Negrão">
+    </div>
+  </div>
+</div>
+    </section>
+    <section class="section">
+  <span id="servicos" style="position:relative; top: -30px; display:block;"></span>
+<div class="sec-header">
+    <span class="sec-label">Serviços</span>
+  </div>
+
+  <div class="accordion" id="accordion">
+
+    <!-- 1 -->
+    <div class="panel active" data-index="0">
+      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800')"></div>
+      <div class="panel-bar">
+        <span class="panel-num">01</span>
+        <span class="panel-name-vertical">Publicidade</span>
+      </div>
+      <div class="panel-content">
+        <span class="panel-tag">Audiovisual</span>
+        <div class="panel-title">Gravações de<br>Publicidade</div>
+        <div class="panel-desc">Conteúdo visual estratégico para marcas, produtos e campanhas. Do conceito à entrega, cada frame pensado para converter.</div>
+      </div>
+      <div class="panel-progress"><div class="panel-progress-fill"></div></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="panel" data-index="1">
+      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800')"></div>
+      <div class="panel-bar">
+        <span class="panel-num">02</span>
+        <span class="panel-name-vertical">Eventos</span>
+      </div>
+      <div class="panel-content">
+        <span class="panel-tag">Cobertura</span>
+        <div class="panel-title">Mídia de<br>Eventos</div>
+        <div class="panel-desc">Casamentos, shows e celebrações. Cada momento único registrado com atenção aos detalhes que fazem a diferença.</div>
+      </div>
+      <div class="panel-progress"><div class="panel-progress-fill"></div></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="panel" data-index="2">
+      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800')"></div>
+      <div class="panel-bar">
+        <span class="panel-num">03</span>
+        <span class="panel-name-vertical">Ensaios</span>
+      </div>
+      <div class="panel-content">
+        <span class="panel-tag">Fotografia</span>
+        <div class="panel-title">Ensaios<br>Pessoais</div>
+        <div class="panel-desc">Sessões pensadas para revelar a melhor versão de você. Ambiente descontraído, resultado profissional.</div>
+      </div>
+      <div class="panel-progress"><div class="panel-progress-fill"></div></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="panel" data-index="3">
+      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800')"></div>
+      <div class="panel-bar">
+        <span class="panel-num">04</span>
+        <span class="panel-name-vertical">Profissional</span>
+      </div>
+      <div class="panel-content">
+        <span class="panel-tag">Corporativo</span>
+        <div class="panel-title">Fotografia<br>Profissional</div>
+        <div class="panel-desc">Headshots, fotos corporativas e retratos para LinkedIn e portfólios. Imagem que comunica credibilidade.</div>
+      </div>
+      <div class="panel-progress"><div class="panel-progress-fill"></div></div>
+    </div>
+
+    <!-- 5 -->
+    <div class="panel" data-index="4">
+      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800')"></div>
+      <div class="panel-bar">
+        <span class="panel-num">05</span>
+        <span class="panel-name-vertical">Edição</span>
+      </div>
+      <div class="panel-content">
+        <span class="panel-tag">Pós-produção</span>
+        <div class="panel-title">Edição de<br>Áudio & Vídeo</div>
+        <div class="panel-desc">Pós-produção completa com tratamento de cor, trilha, corte e motion. Seu conteúdo no nível que merece.</div>
+      </div>
+      <div class="panel-progress"><div class="panel-progress-fill"></div></div>
+    </div>
+
+  </div>
+
+  <div class="dots" id="dots">
+    <button class="dot active" data-index="0"></button>
+    <button class="dot" data-index="1"></button>
+    <button class="dot" data-index="2"></button>
+    <button class="dot" data-index="3"></button>
+    <button class="dot" data-index="4"></button>
+  </div>
+    </section>
     <section id="portfolio" class="section"></section>
     <section id="contato"  class="section"></section>
 
     <script src="assets/js/hero.js"></script>
+    <script>
+    const panels   = Array.from(document.querySelectorAll('.panel'));
+    const dots     = Array.from(document.querySelectorAll('.dot'));
+    let   current  = 0;
+    let   timer    = null;
+
+    function activate(index) {
+      // reset all
+      panels.forEach(p => {
+        p.classList.remove('active');
+        // restart progress animation
+        const fill = p.querySelector('.panel-progress-fill');
+        fill.style.animation = 'none';
+        fill.offsetHeight; // reflow
+        fill.style.animation = '';
+      });
+      dots.forEach(d => d.classList.remove('active'));
+
+      panels[index].classList.add('active');
+      dots[index].classList.add('active');
+      current = index;
+    }
+
+    function next() {
+      activate((current + 1) % panels.length);
+    }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 7000); /*Tempo da passagem automatica*/
+    }
+
+    // click no painel
+    panels.forEach((p, i) => {
+      p.addEventListener('click', () => {
+        activate(i);
+        startTimer();
+      });
+    });
+
+    // click nos dots
+    dots.forEach((d, i) => {
+      d.addEventListener('click', () => {
+        activate(i);
+        startTimer();
+      });
+    });
+
+    // inicia
+    startTimer();
+  </script>
 </body>
 </html>
