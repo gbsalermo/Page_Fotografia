@@ -244,7 +244,136 @@
     <button class="dot" data-index="4"></button>
   </div>
     </section>
-    <section id="portfolio" class="section"></section>
+    <section id="portfolio" class="section">
+<div class="sec-header">
+  <span class="sec-label">Portfólio</span>
+</div>
+
+<div class="masonry" id="masonry">
+
+  <!-- FOTO — substitua o src pela foto real -->
+  <div class="masonry-item" data-type="photo"
+       data-src="assets/media/foto-carros.jpg"
+       data-name="Drift Series" data-cat="Automotivo">
+    <img src="assets/media/foto-carros.jpg" alt="Drift Series">
+    <div class="item-label">
+      <span class="item-name">Drift Series</span>
+      <span class="item-cat">Automotivo</span>
+    </div>
+  </div>
+
+  <!-- VÍDEO — substitua os src pelo vídeo real e thumb pela capa -->
+  <div class="masonry-item" data-type="video"
+     data-src="assets/media/Video-Rod.mp4"
+     data-name="Aplicativo ROD" data-cat="Produção de vídeo">
+  <video src="assets/media/Video-Rod.mp4" muted loop playsinline style="min-height:250px; object-fit:cover;"></video>
+  <div class="video-thumb" style="background-image:url('assets/media/thumb-Rod.png')"></div>
+  <div class="play-icon"></div>
+  <div class="item-label">
+    <span class="item-name">Aplicativo ROD</span>
+    <span class="item-cat">Produção de vídeo</span>
+  </div>
+</div>
+
+  <!-- FOTO -->
+  <div class="masonry-item" data-type="photo"
+       data-src="assets/media/foto2.jpg"
+       data-name="Monte Fuji" data-cat="Paisagem">
+    <img src="assets/media/foto-fuji.jpg" alt="Monte Fuji">
+    <div class="item-label">
+      <span class="item-name">Monte Fuji</span>
+      <span class="item-cat">Paisagem</span>
+    </div>
+  </div>
+
+  <!-- FOTO -->
+  <div class="masonry-item" data-type="photo"
+       data-src="assets/media/foto-Drink.jpg"
+       data-name="bar e drink" data-cat="Eventos">
+    <img src="assets/media/foto-Drink.jpg" alt="Cerimônia">
+    <div class="item-label">
+      <span class="item-name">Bar e Dinks</span>
+      <span class="item-cat">Eventos</span>
+    </div>
+  </div>
+
+  <!-- VÍDEO -->
+  <div class="masonry-item" data-type="video"
+       data-src="assets/media/Video-Ginecologista.mp4"
+       data-name="Show ao Vivo" data-cat="Eventos">
+    <video src="assets/media/Video-Ginecologista.mp4" muted loop playsinline style="min-height:250px; object-fit:cover;"></video>
+    <div class="video-thumb" style="background-image:url('assets/media/tumb-Ginecologista.png')"></div>
+    <div class="play-icon"></div>
+    <div class="item-label">
+      <span class="item-name">Drª Luisa Castelo</span>
+      <span class="item-cat">Produção de vídeo</span>
+    </div>
+  </div>
+
+  <!-- FOTO -->
+  <div class="masonry-item" data-type="photo"
+       data-src="assets/media/Urbano.jpg"
+       data-name="Ensaio Urbano" data-cat="Ensaios">
+    <img src="assets/media/Urbano.jpg" alt="Ensaio Urbano">
+    <div class="item-label">
+      <span class="item-name">Ensaio Urbano</span>
+      <span class="item-cat">Ensaios</span>
+    </div>
+  </div>
+
+  <!-- FOTO -->
+  <div class="masonry-item" data-type="photo"
+       data-src="assets/media/foto-rural.png"
+       data-name="Retrato Executivo" data-cat="Profissional">
+    <img src="assets/media/foto-rural.png" alt="Retrato Executivo">
+    <div class="item-label">
+      <span class="item-name">Retratos</span>
+      <span class="item-cat">Profissional</span>
+    </div>
+  </div>
+
+  <!-- VÍDEO -->
+  <div class="masonry-item" data-type="video"
+       data-src="assets/media/makingOF.mp4"
+       data-name="Campanha Produto" data-cat="Publicidade">
+    <video src="assets/media/makingOF.mp4" muted loop playsinline style="min-height:250px; object-fit:cover;"></video>
+    <div class="video-thumb" style="background-image:url('assets/media/thumb-making.png')"></div>
+    <div class="play-icon"></div>
+    <div class="item-label">
+      <span class="item-name">Making Of</span>
+      <span class="item-cat">Produção de video</span>
+    </div>
+  </div>
+
+  <!-- FOTO -->
+  <div class="masonry-item" data-type="photo"
+       data-src="assets/media/Buda.jpg"
+       data-name="Foto de Buda" data-cat="ensaios">
+    <img src="assets/media/Buda.jpg" alt="Estúdio">
+    <div class="item-label">
+      <span class="item-name">Buda</span>
+      <span class="item-cat">Ensaios</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOTÃO — substitua o href pela URL real do Adobe Portfolio -->
+<div class="portfolio-cta">
+  <a href="https://negraofilms.myportfolio.com/" target="_blank" class="btn-portfolio">
+    Ver portfólio completo <span class="btn-arrow">→</span>
+  </a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lbClose">✕ FECHAR</button>
+    <div id="lbMedia"></div>
+    <div class="lightbox-label" id="lbLabel"></div>
+  </div>
+</div>
+    </section>
     <section id="contato"  class="section"></section>
 
     <script src="assets/js/hero.js"></script>
@@ -299,5 +428,48 @@
     // inicia
     startTimer();
   </script>
+  <script src="assets/js/hero.js"></script>
+    <script>
+    </script>
+
+    <script>
+      const items    = document.querySelectorAll('.masonry-item');
+      const lightbox = document.getElementById('lightbox');
+      const lbMedia  = document.getElementById('lbMedia');
+      const lbLabel  = document.getElementById('lbLabel');
+      const lbClose  = document.getElementById('lbClose');
+
+      items.forEach(item => {
+        const video = item.querySelector('video');
+        if (video) {
+          item.addEventListener('mouseenter', () => video.play());
+          item.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+        }
+        item.addEventListener('click', () => {
+          const type = item.dataset.type;
+          const src  = item.dataset.src;
+          const name = item.dataset.name;
+          const cat  = item.dataset.cat;
+          lbMedia.innerHTML = type === 'video'
+            ? `<video src="${src}" controls autoplay style="width:100%;border-radius:4px;background:#000;"></video>`
+            : `<img src="${src}" alt="${name}">`;
+          lbLabel.innerHTML = `<span class="item-name">${name}</span><span class="item-cat">${cat}</span>`;
+          lightbox.classList.add('open');
+        });
+      });
+
+      lbClose.addEventListener('click', closeLB);
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLB(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+
+      function closeLB() {
+        lightbox.classList.remove('open');
+        lbMedia.innerHTML = '';
+      }
+      
+    </script>
+
+  </body>
+</html>
 </body>
 </html>

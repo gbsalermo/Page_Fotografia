@@ -588,3 +588,201 @@
   from { width: 0%; }
   to   { width: 100%; }
 }
+/* ============================================================
+   PORTFÓLIO — adicione ao seu components.css
+   ============================================================ */
+
+/* ── MASONRY ─────────────────────────────────────────────── */
+.masonry {
+  columns: 3;
+  column-gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masonry-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.masonry-item img,
+.masonry-item video {
+  width: 100%; display: block;
+  border-radius: 4px;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1), filter 0.5s ease;
+  filter: brightness(0.9) saturate(1.05);
+}
+.masonry-item:hover img,
+.masonry-item:hover video {
+  transform: scale(1.04);
+  filter: brightness(0.55) saturate(1.1);
+}
+
+/* thumbnail do vídeo */
+.video-thumb {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  border-radius: 4px;
+}
+.masonry-item:hover .video-thumb { opacity: 0; }
+
+/* overlay gradiente */
+.masonry-item::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.05) 55%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 4px;
+  z-index: 2;
+}
+.masonry-item:hover::after { opacity: 1; }
+
+/* borda dourada */
+.masonry-item::before {
+  content: '';
+  position: absolute; inset: 0;
+  border: 1px solid rgba(255,200,40,0);
+  border-radius: 4px; z-index: 5;
+  transition: border-color 0.4s ease;
+  pointer-events: none;
+}
+.masonry-item:hover::before { border-color: rgba(255,200,40,0.3); }
+
+/* label */
+.item-label {
+  position: absolute;
+  bottom: 1.2rem; left: 1.2rem; right: 1.2rem;
+  z-index: 4;
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.masonry-item:hover .item-label { opacity: 1; transform: translateY(0); }
+
+.item-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem; font-weight: 400;
+  color: #fff; letter-spacing: 0.06em; display: block;
+}
+.item-cat {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.52rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: #ffe566;
+  opacity: 0.85; margin-top: 4px; display: block;
+}
+
+/* ícone de play */
+.play-icon {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  border: 1.5px solid rgba(255,200,40,0.6);
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.play-icon::after {
+  content: '';
+  display: block;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 14px;
+  border-color: transparent transparent transparent #ffe566;
+  margin-left: 3px;
+}
+.masonry-item:hover .play-icon { opacity: 0; }
+
+/* ── BOTÃO VER MAIS ──────────────────────────────────────── */
+.portfolio-cta {
+  display: flex; justify-content: center; margin-top: 4rem;
+}
+.btn-portfolio {
+  position: relative;
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 1rem 2.6rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #ffe566; text-decoration: none;
+  border: 1px solid rgba(255,200,40,0.35);
+  border-radius: 2px; background: transparent;
+  transition: all 0.35s ease; overflow: hidden;
+}
+.btn-portfolio::before {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(255,200,40,0.06);
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+}
+.btn-portfolio:hover::before { transform: translateX(0); }
+.btn-portfolio:hover {
+  border-color: rgba(255,200,40,0.7);
+  box-shadow: 0 0 24px rgba(255,160,0,0.15);
+  color: #fff;
+}
+.btn-arrow { display: inline-block; transition: transform 0.3s ease; }
+.btn-portfolio:hover .btn-arrow { transform: translateX(6px); }
+
+/* ── LIGHTBOX ────────────────────────────────────────────── */
+.lightbox {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+.lightbox.open { display: flex; }
+
+.lightbox-inner {
+  position: relative;
+  max-width: 900px;
+  max-height: 90vh;
+  width: 90%;
+}
+.lightbox-inner img,
+.lightbox-inner video {
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.lightbox-inner video { background: #000; }
+
+.lightbox-close {
+  position: absolute;
+  top: -40px; right: 0;
+  background: none; border: none;
+  color: rgba(255,200,40,0.7);
+  font-size: 1rem; cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+.lightbox-close:hover { color: #fff; }
+
+.lightbox-label {
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.masonry-item img,
+.masonry-item video {
+  height: auto;
+  width: 100%;
+  display: block;
+}

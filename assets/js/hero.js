@@ -3,9 +3,9 @@
 /* ── FOTOS DO VISOR ──────────────────────────────────────── */
 
 const PHOTOS = [
-  'assets/media/foto-carros.jpg',
-  'assets/media/foto-fuji.jpg',
-  'assets/media/foto-lanternas.jpg'
+  'assets/media/perfil1.png',
+  'assets/media/foto-lanternas.jpg',
+  'assets/media/perfil2.png'
 ];
 
 const photoEls = [
@@ -161,4 +161,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const top = target.getBoundingClientRect().top + window.scrollY - menuHeight;
     window.scrollTo({ top, behavior: 'smooth' });
   });
+});
+// força recalculo do masonry após carregar todas as imagens
+window.addEventListener('load', () => {
+  const masonry = document.getElementById('masonry');
+  masonry.style.display = 'none';
+  masonry.offsetHeight; // reflow
+  masonry.style.display = '';
 });
