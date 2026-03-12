@@ -244,231 +244,308 @@
     <button class="dot" data-index="4"></button>
   </div>
     </section>
-    <section id="portfolio" class="section">
-<div class="sec-header">
-  <span class="sec-label">Portfólio</span>
+
+<section class="section" style="padding-top: 5rem;">
+  <span id="portfolio" style="position:relative; top:-70px; display:block;"></span>
+
+  <div class="portfolio-grid">
+
+    <!-- ESQUERDA: título + botão -->
+    <div class="portfolio-side">
+      <div class="sec-header">
+        <span class="sec-label">Portfólio</span>
+      </div>
+      <p class="portfolio-sub">Cada projeto conta uma história. Veja o trabalho completo.</p>
+      <div class="portfolio-cta">
+        <a href="https://negraofilms.myportfolio.com/" target="_blank" class="btn-portfolio">
+          Ver portfólio completo <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- DIREITA: slider -->
+    <div class="slider-wrap">
+
+      <button class="slider-btn prev" id="btnPrev">&#8592;</button>
+
+      <div class="slider-viewport">
+        <div class="slider-track" id="sliderTrack">
+
+          <div class="slide" data-type="photo" data-src="assets/media/foto-carros.jpg" data-name="Drift Series" data-cat="Automotivo">
+            <img src="assets/media/foto-carros.jpg" alt="Drift Series">
+            <div class="slide-label">
+              <span class="slide-name">Drift Series</span>
+              <span class="slide-cat">Automotivo</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="video" data-src="assets/media/Video-Rod.mp4" data-name="Aplicativo ROD" data-cat="Produção de vídeo">
+            <video src="assets/media/Video-Rod.mp4" muted loop playsinline></video>
+            <div class="play-badge">Vídeo</div>
+            <div class="slide-label">
+              <span class="slide-name">Aplicativo ROD</span>
+              <span class="slide-cat">Produção de vídeo</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="photo" data-src="assets/media/foto-fuji.jpg" data-name="Monte Fuji" data-cat="Paisagem">
+            <img src="assets/media/foto-fuji.jpg" alt="Monte Fuji">
+            <div class="slide-label">
+              <span class="slide-name">Monte Fuji</span>
+              <span class="slide-cat">Paisagem</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="photo" data-src="assets/media/foto-Drink.jpg" data-name="Bar e Drinks" data-cat="Eventos">
+            <img src="assets/media/foto-Drink.jpg" alt="Bar e Drinks">
+            <div class="slide-label">
+              <span class="slide-name">Bar e Drinks</span>
+              <span class="slide-cat">Eventos</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="video" data-src="assets/media/Video-Ginecologista.mp4" data-name="Drª Luisa Castelo" data-cat="Produção de vídeo">
+            <video src="assets/media/Video-Ginecologista.mp4" muted loop playsinline></video>
+            <div class="play-badge">Vídeo</div>
+            <div class="slide-label">
+              <span class="slide-name">Drª Luisa Castelo</span>
+              <span class="slide-cat">Produção de vídeo</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="photo" data-src="assets/media/Urbano.jpg" data-name="Ensaio Urbano" data-cat="Ensaios">
+            <img src="assets/media/Urbano.jpg" alt="Ensaio Urbano">
+            <div class="slide-label">
+              <span class="slide-name">Ensaio Urbano</span>
+              <span class="slide-cat">Ensaios</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="photo" data-src="assets/media/foto-rural.png" data-name="Retratos" data-cat="Profissional">
+            <img src="assets/media/foto-rural.png" alt="Retratos">
+            <div class="slide-label">
+              <span class="slide-name">Retratos</span>
+              <span class="slide-cat">Profissional</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="video" data-src="assets/media/makingOF.mp4" data-name="Making Of" data-cat="Produção de vídeo">
+            <video src="assets/media/makingOF.mp4" muted loop playsinline></video>
+            <div class="play-badge">Vídeo</div>
+            <div class="slide-label">
+              <span class="slide-name">Making Of</span>
+              <span class="slide-cat">Produção de vídeo</span>
+            </div>
+          </div>
+
+          <div class="slide" data-type="photo" data-src="assets/media/Buda.jpg" data-name="Buda" data-cat="Ensaios">
+            <img src="assets/media/Buda.jpg" alt="Buda">
+            <div class="slide-label">
+              <span class="slide-name">Buda</span>
+              <span class="slide-cat">Ensaios</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="slider-btn next" id="btnNext">&#8594;</button>
+    </div>
+
+  </div>
+
+      <div class="slider-counter"><span id="curSlide">1</span> / 9</div>
+      <div class="slider-dots" id="sliderDots"></div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lbClose">✕ FECHAR</button>
+      <div id="lbMedia"></div>
+      <div class="lightbox-label" id="lbLabel"></div>
+    </div>
+  </div>
+
+</section>
+
+
+<section id="contato" class="section">
+<div class="contato-wrap">
+
+  <!-- ESQUERDA -->
+  <div class="contato-left">
+    <h2 class="contato-frase">Pronto para o<br><span>próximo projeto?</span></h2>
+    <p class="contato-sub">Ensaios, eventos, campanhas ou produção audiovisual — entre em contato e vamos conversar.</p>
+  </div>
+
+  <!-- DIVISOR -->
+  <div class="contato-divider"></div>
+
+  <!-- DIREITA -->
+  <div class="contato-right">
+
+    <!-- WHATSAPP — substitua o número -->
+    <a href="https://wa.me/557398103-2463" target="_blank" class="contato-link">
+      <div class="contato-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+      </div>
+      <div class="contato-info">
+        <span class="contato-type">WhatsApp</span>
+        <span class="contato-value">+55 (73) 98103-2463</span>
+      </div>
+      <span class="contato-arrow">→</span>
+    </a>
+
+    <!-- EMAIL — substitua o email -->
+    <a href="mailto:edilberto@email.com" class="contato-link">
+      <div class="contato-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </div>
+      <div class="contato-info">
+        <span class="contato-type">E-mail</span>
+        <span class="contato-value">edilberto@email.com</span>
+      </div>
+      <span class="contato-arrow">→</span>
+    </a>
+
+    <!-- INSTAGRAM — substitua o @ -->
+    <a href="https://instagram.com/negrao.films" target="_blank" class="contato-link">
+      <div class="contato-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </div>
+      <div class="contato-info">
+        <span class="contato-type">Instagram</span>
+        <span class="contato-value">@negrao.films</span>
+      </div>
+      <span class="contato-arrow">→</span>
+    </a>
+
+  </div>
+
 </div>
-
-<div class="masonry" id="masonry">
-
-  <!-- FOTO — substitua o src pela foto real -->
-  <div class="masonry-item" data-type="photo"
-       data-src="assets/media/foto-carros.jpg"
-       data-name="Drift Series" data-cat="Automotivo">
-    <img src="assets/media/foto-carros.jpg" alt="Drift Series">
-    <div class="item-label">
-      <span class="item-name">Drift Series</span>
-      <span class="item-cat">Automotivo</span>
-    </div>
-  </div>
-
-  <!-- VÍDEO — substitua os src pelo vídeo real e thumb pela capa -->
-  <div class="masonry-item" data-type="video"
-     data-src="assets/media/Video-Rod.mp4"
-     data-name="Aplicativo ROD" data-cat="Produção de vídeo">
-  <video src="assets/media/Video-Rod.mp4" muted loop playsinline style="min-height:250px; object-fit:cover;"></video>
-  <div class="video-thumb" style="background-image:url('assets/media/thumb-Rod.png')"></div>
-  <div class="play-icon"></div>
-  <div class="item-label">
-    <span class="item-name">Aplicativo ROD</span>
-    <span class="item-cat">Produção de vídeo</span>
-  </div>
-</div>
-
-  <!-- FOTO -->
-  <div class="masonry-item" data-type="photo"
-       data-src="assets/media/foto2.jpg"
-       data-name="Monte Fuji" data-cat="Paisagem">
-    <img src="assets/media/foto-fuji.jpg" alt="Monte Fuji">
-    <div class="item-label">
-      <span class="item-name">Monte Fuji</span>
-      <span class="item-cat">Paisagem</span>
-    </div>
-  </div>
-
-  <!-- FOTO -->
-  <div class="masonry-item" data-type="photo"
-       data-src="assets/media/foto-Drink.jpg"
-       data-name="bar e drink" data-cat="Eventos">
-    <img src="assets/media/foto-Drink.jpg" alt="Cerimônia">
-    <div class="item-label">
-      <span class="item-name">Bar e Dinks</span>
-      <span class="item-cat">Eventos</span>
-    </div>
-  </div>
-
-  <!-- VÍDEO -->
-  <div class="masonry-item" data-type="video"
-       data-src="assets/media/Video-Ginecologista.mp4"
-       data-name="Show ao Vivo" data-cat="Eventos">
-    <video src="assets/media/Video-Ginecologista.mp4" muted loop playsinline style="min-height:250px; object-fit:cover;"></video>
-    <div class="video-thumb" style="background-image:url('assets/media/tumb-Ginecologista.png')"></div>
-    <div class="play-icon"></div>
-    <div class="item-label">
-      <span class="item-name">Drª Luisa Castelo</span>
-      <span class="item-cat">Produção de vídeo</span>
-    </div>
-  </div>
-
-  <!-- FOTO -->
-  <div class="masonry-item" data-type="photo"
-       data-src="assets/media/Urbano.jpg"
-       data-name="Ensaio Urbano" data-cat="Ensaios">
-    <img src="assets/media/Urbano.jpg" alt="Ensaio Urbano">
-    <div class="item-label">
-      <span class="item-name">Ensaio Urbano</span>
-      <span class="item-cat">Ensaios</span>
-    </div>
-  </div>
-
-  <!-- FOTO -->
-  <div class="masonry-item" data-type="photo"
-       data-src="assets/media/foto-rural.png"
-       data-name="Retrato Executivo" data-cat="Profissional">
-    <img src="assets/media/foto-rural.png" alt="Retrato Executivo">
-    <div class="item-label">
-      <span class="item-name">Retratos</span>
-      <span class="item-cat">Profissional</span>
-    </div>
-  </div>
-
-  <!-- VÍDEO -->
-  <div class="masonry-item" data-type="video"
-       data-src="assets/media/makingOF.mp4"
-       data-name="Campanha Produto" data-cat="Publicidade">
-    <video src="assets/media/makingOF.mp4" muted loop playsinline style="min-height:250px; object-fit:cover;"></video>
-    <div class="video-thumb" style="background-image:url('assets/media/thumb-making.png')"></div>
-    <div class="play-icon"></div>
-    <div class="item-label">
-      <span class="item-name">Making Of</span>
-      <span class="item-cat">Produção de video</span>
-    </div>
-  </div>
-
-  <!-- FOTO -->
-  <div class="masonry-item" data-type="photo"
-       data-src="assets/media/Buda.jpg"
-       data-name="Foto de Buda" data-cat="ensaios">
-    <img src="assets/media/Buda.jpg" alt="Estúdio">
-    <div class="item-label">
-      <span class="item-name">Buda</span>
-      <span class="item-cat">Ensaios</span>
-    </div>
-  </div>
-
-</div>
-
-<!-- BOTÃO — substitua o href pela URL real do Adobe Portfolio -->
-<div class="portfolio-cta">
-  <a href="https://negraofilms.myportfolio.com/" target="_blank" class="btn-portfolio">
-    Ver portfólio completo <span class="btn-arrow">→</span>
-  </a>
-</div>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-inner">
-    <button class="lightbox-close" id="lbClose">✕ FECHAR</button>
-    <div id="lbMedia"></div>
-    <div class="lightbox-label" id="lbLabel"></div>
-  </div>
-</div>
-    </section>
-    <section id="contato"  class="section"></section>
-
-    <script src="assets/js/hero.js"></script>
-    <script>
-    const panels   = Array.from(document.querySelectorAll('.panel'));
-    const dots     = Array.from(document.querySelectorAll('.dot'));
-    let   current  = 0;
-    let   timer    = null;
-
-    function activate(index) {
-      // reset all
-      panels.forEach(p => {
-        p.classList.remove('active');
-        // restart progress animation
-        const fill = p.querySelector('.panel-progress-fill');
-        fill.style.animation = 'none';
-        fill.offsetHeight; // reflow
-        fill.style.animation = '';
-      });
-      dots.forEach(d => d.classList.remove('active'));
-
-      panels[index].classList.add('active');
-      dots[index].classList.add('active');
-      current = index;
-    }
-
-    function next() {
-      activate((current + 1) % panels.length);
-    }
-
-    function startTimer() {
-      clearInterval(timer);
-      timer = setInterval(next, 7000); /*Tempo da passagem automatica*/
-    }
-
-    // click no painel
-    panels.forEach((p, i) => {
-      p.addEventListener('click', () => {
-        activate(i);
-        startTimer();
-      });
-    });
-
-    // click nos dots
-    dots.forEach((d, i) => {
-      d.addEventListener('click', () => {
-        activate(i);
-        startTimer();
-      });
-    });
-
-    // inicia
-    startTimer();
-  </script>
+</section>
   <script src="assets/js/hero.js"></script>
-    <script>
-    </script>
 
-    <script>
-      const items    = document.querySelectorAll('.masonry-item');
-      const lightbox = document.getElementById('lightbox');
-      const lbMedia  = document.getElementById('lbMedia');
-      const lbLabel  = document.getElementById('lbLabel');
-      const lbClose  = document.getElementById('lbClose');
+<script>
+  /* ── ACCORDION SERVIÇOS ─────────────────────────────── */
+  const panels = Array.from(document.querySelectorAll('.panel'));
+  const dots   = Array.from(document.querySelectorAll('.dot'));
+  let current  = 0;
+  let timer    = null;
 
-      items.forEach(item => {
-        const video = item.querySelector('video');
-        if (video) {
-          item.addEventListener('mouseenter', () => video.play());
-          item.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-        }
-        item.addEventListener('click', () => {
-          const type = item.dataset.type;
-          const src  = item.dataset.src;
-          const name = item.dataset.name;
-          const cat  = item.dataset.cat;
-          lbMedia.innerHTML = type === 'video'
-            ? `<video src="${src}" controls autoplay style="width:100%;border-radius:4px;background:#000;"></video>`
-            : `<img src="${src}" alt="${name}">`;
-          lbLabel.innerHTML = `<span class="item-name">${name}</span><span class="item-cat">${cat}</span>`;
-          lightbox.classList.add('open');
-        });
-      });
+  function activate(index) {
+    panels.forEach(p => {
+      p.classList.remove('active');
+      const fill = p.querySelector('.panel-progress-fill');
+      fill.style.animation = 'none';
+      fill.offsetHeight;
+      fill.style.animation = '';
+    });
+    dots.forEach(d => d.classList.remove('active'));
+    panels[index].classList.add('active');
+    dots[index].classList.add('active');
+    current = index;
+  }
+  function next() { activate((current + 1) % panels.length); }
+  function startTimer() { clearInterval(timer); timer = setInterval(next, 7000); }
+  panels.forEach((p, i) => p.addEventListener('click', () => { activate(i); startTimer(); }));
+  dots.forEach((d, i)   => d.addEventListener('click', () => { activate(i); startTimer(); }));
+  startTimer();
+</script>
 
-      lbClose.addEventListener('click', closeLB);
-      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLB(); });
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+<script>
+  /* ── SLIDER PORTFÓLIO ───────────────────────────────── */
+  const track    = document.getElementById('sliderTrack');
+  const slides   = Array.from(document.querySelectorAll('.slide'));
+  const btnPrev  = document.getElementById('btnPrev');
+  const btnNext  = document.getElementById('btnNext');
+  const curEl    = document.getElementById('curSlide');
+  const dotsWrap = document.getElementById('sliderDots');
+  const lightbox = document.getElementById('lightbox');
+  const lbMedia  = document.getElementById('lbMedia');
+  const lbLabel  = document.getElementById('lbLabel');
+  const lbClose  = document.getElementById('lbClose');
 
-      function closeLB() {
-        lightbox.classList.remove('open');
-        lbMedia.innerHTML = '';
-      }
-      
-    </script>
+  const total = slides.length;
+  let cur = 0;
+  let dragDelta = 0;
 
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'sdot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+  const sdots = Array.from(dotsWrap.querySelectorAll('.sdot'));
+
+  function goTo(index) {
+    const curVideo = slides[cur].querySelector('video');
+    if (curVideo) { curVideo.pause(); curVideo.currentTime = 0; }
+    cur = Math.max(0, Math.min(index, total - 1));
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    curEl.textContent = cur + 1;
+    sdots.forEach((d, i) => d.classList.toggle('active', i === cur));
+    btnPrev.disabled = cur === 0;
+    btnNext.disabled = cur === total - 1;
+    const newVideo = slides[cur].querySelector('video');
+    if (newVideo) newVideo.play();
+  }
+
+  btnPrev.addEventListener('click', () => goTo(cur - 1));
+  btnNext.addEventListener('click', () => goTo(cur + 1));
+  btnPrev.disabled = true;
+
+  let startX = 0, isDragging = false;
+  track.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX; dragDelta = 0; track.style.transition = 'none'; });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    dragDelta = e.clientX - startX;
+    track.style.transform = `translateX(calc(-${cur * 100}% + ${dragDelta}px))`;
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    track.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1)';
+    if (dragDelta < -80) goTo(cur + 1);
+    else if (dragDelta > 80) goTo(cur - 1);
+    else goTo(cur);
+  });
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; dragDelta = 0; track.style.transition = 'none'; });
+  track.addEventListener('touchmove',  e => { dragDelta = e.touches[0].clientX - startX; track.style.transform = `translateX(calc(-${cur * 100}% + ${dragDelta}px))`; });
+  track.addEventListener('touchend', () => {
+    track.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1)';
+    if (dragDelta < -80) goTo(cur + 1);
+    else if (dragDelta > 80) goTo(cur - 1);
+    else goTo(cur);
+  });
+
+  slides.forEach(slide => {
+    slide.addEventListener('click', () => {
+      if (Math.abs(dragDelta) > 10) return;
+      lbMedia.innerHTML = slide.dataset.type === 'video'
+        ? `<video src="${slide.dataset.src}" controls autoplay style="width:100%;border-radius:4px;background:#000;"></video>`
+        : `<img src="${slide.dataset.src}" alt="${slide.dataset.name}">`;
+      lbLabel.innerHTML = `<span class="slide-name">${slide.dataset.name}</span><span class="slide-cat">${slide.dataset.cat}</span>`;
+      lightbox.classList.add('open');
+    });
+  });
+
+  lbClose.addEventListener('click', closeLB);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLB(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLB();
+    if (e.key === 'ArrowLeft')  goTo(cur - 1);
+    if (e.key === 'ArrowRight') goTo(cur + 1);
+  });
+  function closeLB() { lightbox.classList.remove('open'); lbMedia.innerHTML = ''; }
+
+  goTo(0);
+</script>
   </body>
 </html>
 </body>
