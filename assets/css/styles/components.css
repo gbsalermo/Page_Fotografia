@@ -1096,6 +1096,7 @@
    .anc-mobile { display: none; }
 @media (max-width: 800px) {
 
+
   .anc-mobile { 
     display: block; 
     position: relative;
@@ -1103,10 +1104,19 @@
   }
 
   /* ── GERAL ─────────────────────────────────────────────── */
+  body{
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  
   .section {
     padding: 5rem 1.5rem 3rem !important;
     min-height: auto !important;
     scroll-margin-top: 0px;
+    max-width: 100vw !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
 
   }
   html {
@@ -1253,7 +1263,9 @@
     width: 100% !important;
     height: 64px !important;
     min-height: 64px !important;
+    position: relative !important; /* adiciona isso */
   }
+
   .panel.active {
     height: 320px !important;
   }
@@ -1263,10 +1275,22 @@
     justify-content: flex-start !important;
     gap: 1rem !important;
   }
+  /* diminui fonte do título */
+.panel-title {
+  font-size: 1.2rem !important;
+}
+.panel-desc{
+  font-size: 1rem !important;
+}
   .panel-name-vertical {
     writing-mode: horizontal-tb !important;
     transform: none !important;
     font-size: 1rem !important;
+  }
+    .panel.active .panel-name-vertical {
+    writing-mode: vertical-rl !important;
+    transform: rotate(180deg) !important;
+    font-size: 0.9rem !important;
   }
   .dots {
     margin-top: 1rem !important;
