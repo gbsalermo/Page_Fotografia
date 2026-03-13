@@ -1083,56 +1083,40 @@
 /* hamburguer — escondido no desktop */
 .close-menu { display: none; }
 .close-menu-label { display: none; }
-
-
+.hero-logo-mobile { display: none; }
+.anc-mobile { display: none; }
 
 /* ============================================================
    MOBILE
    ============================================================ */
-
-   .hero-logo-mobile{
-    display: none; /*Escondo a logo no desktop*/
-   }
-   .anc-mobile { display: none; }
 @media (max-width: 800px) {
 
-
-  .anc-mobile { 
-    display: block; 
-    position: relative;
-    top: 70px;
-  }
-
-  /* ── GERAL ─────────────────────────────────────────────── */
-  body{
-    max-width: 100vw !important;
+  /* ── RESET GERAL ────────────────────────────────────────── */
+  html, body {
     overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
-  
-  
-  
+
+  * {
+    box-sizing: border-box !important;
+  }
+
   .section {
     padding: 5rem 1.5rem 3rem !important;
     min-height: auto !important;
-    scroll-margin-top: 0px;
-    max-width: 100vw !important;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-
-  }
-  html {
-    scroll-padding-top: 200rem;
-  }
-  .sobre,
-  .hero-grid,
-  .accordion,
-  .portfolio-grid,
-  .contato-wrap {
-    max-width: 100% !important;
     width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
- 
-  
+
+  /* ── ÂNCORAS MOBILE ─────────────────────────────────────── */
+  .anc-mobile {
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+
   /* ── MENU MOBILE ────────────────────────────────────────── */
   .menu {
     display: none;
@@ -1150,8 +1134,9 @@
   }
   .menu nav ul {
     flex-direction: column !important;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
+    padding: 0 !important;
   }
   .menu nav ul li a {
     font-size: 1.5rem;
@@ -1159,17 +1144,20 @@
   }
   .close-menu-label {
     display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    padding: 1rem 1.5rem;
+    background: #0a0a0a;
   }
   .close-menu-label::after {
     content: '☰';
-    position: fixed;
-    z-index: 200;
-    top: 1rem;
-    right: 1.5rem;
     color: #ffe566;
     font-size: 2rem;
     cursor: pointer;
     line-height: 1;
+    display: block;
   }
   .close-menu:checked ~ .close-menu-label::after {
     content: '✕';
@@ -1182,30 +1170,22 @@
     gap: 2rem !important;
     min-height: auto !important;
     padding: 0 !important;
+    width: 100% !important;
   }
   .hero-text {
-    padding-left: 8rem !important;
+    padding-left: 0 !important;
+    width: 100% !important;
   }
-  .hero-text::before {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1.5rem;
-}
   .hero-text::after {
-    top: 50%; /* empurra para baixo, abaixo da logo */
-    height: 40%;
-    margin-left: 5rem;
+    display: none !important;
   }
-.hero-logo-mobile {
+  .hero-logo-mobile {
     display: block;
-    width: 200px;
+    width: 150px;
     margin-bottom: 1rem;
-    margin-right: 8rem;
   }
   .hero-title {
-    font-size: clamp(2.8rem, 9vw, 4.5rem) !important;
+    font-size: clamp(2.5rem, 8vw, 4rem) !important;
   }
   .hero-sub {
     font-size: 1rem !important;
@@ -1218,11 +1198,13 @@
   }
   .hero-visual {
     width: 100% !important;
-    height: 350px !important;
+    height: 320px !important;
   }
   .viewfinder {
     width: 100% !important;
     max-width: 100% !important;
+    aspect-ratio: auto !important;
+    height: 320px !important;
   }
 
   /* ── SOBRE ──────────────────────────────────────────────── */
@@ -1230,53 +1212,61 @@
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
     padding: 0 !important;
+    width: 100% !important;
   }
   .sobre-foto-wrap {
     width: 100% !important;
+    max-width: 100% !important;
     height: 320px !important;
   }
   .sobre-foto {
-    height: 320px !important;
+    width: 100% !important;
     max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
+    height: 320px !important;
+  }
+  .sobre-foto img {
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .sobre-texto {
-  position: relative;
-  z-index: 2;
-}
-  .sobre-texto p {
-    font-size: 1.2rem !important;
+    width: 100% !important;
     max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
+  }
+  .sobre-texto p {
+    font-size: 1.1rem !important;
+    width: 100% !important;
   }
   .sobre-quote {
-  position: relative;
-  z-index: 2;
-  background: rgba(10,10,10,0.85);
-  margin-bottom: 5rem;
-}
+    background: rgba(10,10,10,0.85);
+    margin-bottom: 2rem;
+  }
   .sobre-quote p {
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
   }
 
   /* ── SERVIÇOS ───────────────────────────────────────────── */
+  .sec-header {
+    margin: 0 0 1.5rem 0 !important;
+    padding: 0 !important;
+  }
+  .sec-label {
+    font-size: 1.5rem !important;
+  }
   .accordion {
     flex-direction: column !important;
     height: auto !important;
     gap: 0.5rem !important;
+    width: 100% !important;
   }
   .panel {
     flex: none !important;
     width: 100% !important;
     height: 64px !important;
     min-height: 64px !important;
-    position: relative !important; /* adiciona isso */
+    position: relative !important;
   }
-
   .panel.active {
-    height: 320px !important;
+    height: 400px !important;
   }
   .panel-bar {
     flex-direction: row !important;
@@ -1284,19 +1274,26 @@
     justify-content: flex-start !important;
     gap: 1rem !important;
   }
-  /* diminui fonte do título */
-.panel-title {
-  font-size: 1.2rem !important;
-}
-.panel-desc{
-  font-size: 1rem !important;
-}
+  .panel.active .panel-bar {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(10,10,10,0.7) !important;
+    z-index: 2 !important;
+  }
+  .panel-title {
+    font-size: 1.2rem !important;
+  }
+  .panel-desc {
+    font-size: 1rem !important;
+  }
   .panel-name-vertical {
     writing-mode: horizontal-tb !important;
     transform: none !important;
     font-size: 1rem !important;
   }
-    .panel.active .panel-name-vertical {
+  .panel.active .panel-name-vertical {
     writing-mode: vertical-rl !important;
     transform: rotate(180deg) !important;
     font-size: 0.9rem !important;
@@ -1308,8 +1305,9 @@
   /* ── PORTFÓLIO ──────────────────────────────────────────── */
   .portfolio-grid {
     grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
     padding: 0 !important;
+    width: 100% !important;
   }
   .portfolio-side {
     align-items: flex-start !important;
@@ -1318,20 +1316,24 @@
     font-size: 2rem !important;
   }
   .portfolio-sub {
-    font-size: 3rem !important;
+    font-size: 1rem !important;
   }
   .slider-wrap {
     width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   .slider-counter,
   #sliderDots {
-  text-align: center !important;
-  padding-left: 0 !important;
-  justify-content: center !important;
-}
+    text-align: center !important;
+    padding-left: 0 !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
   .slide img,
   .slide video {
-    height: 280px !important;
+    height: 260px !important;
   }
   .slider-btn.prev { left: 4px !important; }
   .slider-btn.next { right: 4px !important; }
@@ -1341,20 +1343,12 @@
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
     padding: 0 !important;
+    width: 100% !important;
   }
   .contato-divider { display: none !important; }
   .contato-left { padding-right: 0 !important; }
   .contato-right { padding-left: 0 !important; }
   .contato-frase {
     font-size: 2rem !important;
-  }
-
-  /* ── SEC-HEADER ─────────────────────────────────────────── */
-  .sec-header {
-    margin: 0 0 1.5rem 0 !important;
-    padding: 0 !important;
-  }
-  .sec-label {
-    font-size: 1.5rem !important;
   }
 }
