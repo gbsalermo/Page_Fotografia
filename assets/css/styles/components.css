@@ -768,12 +768,14 @@
   margin-top: 1rem;
   justify-content: center;
 }
-.slider-counter,
-.slider-dots {
-  padding-top: 10px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-left: calc(4rem + 35%); /* empurra para alinhar com o slider */
+@media (min-width: 801px) {
+  .slider-counter,
+  .slider-dots {
+    padding-top: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: calc(4rem + 35%);
+  }
 }
 
 .sdot {
