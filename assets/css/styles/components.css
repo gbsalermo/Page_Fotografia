@@ -1370,6 +1370,8 @@
     width: 100% !important;
     text-align: center !important;
     justify-content: center !important;
+    font-size: 1rem !important;
+    padding: 1rem 1.5rem !important;
   }
 .portfolio-grid {
     padding: 0 !important;
