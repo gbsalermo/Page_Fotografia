@@ -1369,7 +1369,22 @@
     text-align: center !important;
     justify-content: center !important;
   }
-}
+.portfolio-grid {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .slider-wrap,
+  .slider-viewport,
+  .slider-counter,
+  .slider-dots,
+  .portfolio-cta {
+    width: calc(100vw - 3rem) !important;
+    max-width: calc(100vw - 3rem) !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
   /* ── CONTATO ────────────────────────────────────────────── */
   .contato-wrap {
     grid-template-columns: 1fr !important;
@@ -1384,3 +1399,4 @@
     font-size: 2rem !important;
   }
 
+}
