@@ -9,22 +9,25 @@
     <!--Fontes do google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <!-- REMOVER os dois links separados e substituir por este: -->
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:ital@1&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 <body class="main-bg">
 
+<input id="close-menu" class="close-menu" type="checkbox" aria-label="Abrir menu" role="button">
+<label class="close-menu-label" for="close-menu" title="Menu"></label>
+
     <!--MENU-->
-    <aside class="menu">
+    <aside class="menu" >
         <div class="container menu-content">
-            <h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
                 <a href="#inicio">
                     <img src="assets/media/logo2.png" alt="Logo do fotógrafo">
                 </a>
             </h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#inicio">inicio</a></li>
                     <li><a href="#sobre">sobre</a></li>
                     <li><a href="#servicos">serviços</a></li>
@@ -36,8 +39,9 @@
     </aside>
 
     <!--SEÇÕES-->
-    <section id="inicio" class="section">
-        <div class="container">
+       <section class="section">
+       <span id="inicio" style="position:relative; top:50px; display:block;"></span>
+          <div class="container">
             <div class="hero-grid">
 
                 <!-- ESQUERDA: texto -->
@@ -48,6 +52,15 @@
                         <span class="line-2" id="line2">Em cada take.</span>
                     </h1>
                     <p class="hero-sub">Audiovisual que valoriza sua marca</p>
+  
+
+                <div class="hero-tags">
+                    <span>Fotografia</span>
+                    <span class="sep">·</span>
+                    <span>Edição</span>
+                    <span class="sep">·</span>
+                    <span>Produção de Vídeo</span>
+                    </div>
                 </div>
 
                 <!-- DIREITA: visor -->
@@ -56,7 +69,6 @@
 
                         <!-- fotos com crossfade -->
                         <div class="vf-photo active" id="photo0"></div>
-                        <div class="vf-photo"        id="photo1"></div>
                         <div class="vf-photo"        id="photo2"></div>
 
                         <div class="vf-overlay"></div>
@@ -152,7 +164,7 @@
 </div>
     </section>
     <section class="section">
-  <span id="servicos" style="position:relative; top: -30px; display:block;"></span>
+  <span id="servicos" style="position:relative; top: -15px; display:block;"></span>
 <div class="sec-header">
     <span class="sec-label">Serviços</span>
   </div>
@@ -161,7 +173,7 @@
 
     <!-- 1 -->
     <div class="panel active" data-index="0">
-      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800')"></div>
+      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1641583377186-74ae059ca1ea?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
       <div class="panel-bar">
         <span class="panel-num">01</span>
         <span class="panel-name-vertical">Publicidade</span>
@@ -206,7 +218,7 @@
 
     <!-- 4 -->
     <div class="panel" data-index="3">
-      <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800')"></div>
+      <div class="panel-bg" style="background-image: url('https://plus.unsplash.com/premium_photo-1682141322027-3fa79a082524?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
       <div class="panel-bar">
         <span class="panel-num">04</span>
         <span class="panel-name-vertical">Profissional</span>
@@ -245,7 +257,7 @@
   </div>
     </section>
 
-<section class="section" style="padding-top: 5rem;">
+<section class="section" style="padding-top: 10rem;">
   <span id="portfolio" style="position:relative; top:-70px; display:block;"></span>
 
   <div class="portfolio-grid">
@@ -255,10 +267,10 @@
       <div class="sec-header">
         <span class="sec-label">Portfólio</span>
       </div>
-      <p class="portfolio-sub">Cada projeto conta uma história. Veja o trabalho completo.</p>
+      <p class="portfolio-sub">Cada projeto conta uma história.</p>
       <div class="portfolio-cta">
         <a href="https://negraofilms.myportfolio.com/" target="_blank" class="btn-portfolio">
-          Ver portfólio completo <span class="btn-arrow">→</span>
+          Veja o portfólio completo <span class="btn-arrow">→</span>
         </a>
       </div>
     </div>
@@ -546,6 +558,8 @@
 
   goTo(0);
 </script>
+
+<a class="back-to-top" href="#inicio">➤</a>
   </body>
 </html>
 </body>

@@ -4,13 +4,11 @@
 
 const PHOTOS = [
   'assets/media/perfil1.png',
-  'assets/media/foto-lanternas.jpg',
   'assets/media/perfil2.png'
 ];
 
 const photoEls = [
   document.getElementById('photo0'),
-  document.getElementById('photo1'),
   document.getElementById('photo2')
 ];
 
