@@ -1334,6 +1334,8 @@
     padding-left: 0 !important;
     justify-content: center !important;
     width: 100% !important;
+    margin-left: 0 !important;
+    max-width: 100% !important;
   }
   .slide img,
   .slide video {
