@@ -1319,10 +1319,11 @@
     font-size: 1rem !important;
   }
   .slider-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
   }
   .slider-counter,
   #sliderDots {
@@ -1351,7 +1352,19 @@
   width: 100% !important;
   max-width: 100% !important;
 }
+  .portfolio-cta {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    justify-content: flex-start !important;
+  }
 
+  .btn-portfolio {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
   /* ── CONTATO ────────────────────────────────────────────── */
   .contato-wrap {
     grid-template-columns: 1fr !important;
