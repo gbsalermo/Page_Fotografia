@@ -1337,6 +1337,20 @@
   }
   .slider-btn.prev { left: 4px !important; }
   .slider-btn.next { right: 4px !important; }
+  .slider-viewport {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.slider-track {
+  width: 100% !important;
+}
+
+.slide {
+  width: 100% !important;
+  max-width: 100% !important;
+}
 
   /* ── CONTATO ────────────────────────────────────────────── */
   .contato-wrap {
